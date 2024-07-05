@@ -60,7 +60,7 @@ class Account:
 
     @classmethod
     def save_accounts(cls, filename):
-        with open(filename, 'a', newline='') as file:
+        with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
             for account in cls.instances:
                 writer.writerow([account.account_no, account.owner, account.balance])
